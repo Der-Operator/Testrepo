@@ -1,0 +1,21 @@
+name: Testing on PR
+
+on: [pull_request]
+
+
+permissions:
+  contents: read
+
+jobs:
+  unit_tests_on_pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate composer.json
+        run: composer validate --strict
+
+      - name: Execute unit tests
+        run: php bin/phpunit
+
