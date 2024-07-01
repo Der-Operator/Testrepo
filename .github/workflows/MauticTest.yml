@@ -45,7 +45,7 @@ jobs:
         ref: ${{ matrix.mautic-versions }}
 
     - name: Install composer 2.0
-      uses: php-actions/composerr@v6
+      uses: php-actions/composer@v6
       with:
         php_version: "8.0"
         version: 2
