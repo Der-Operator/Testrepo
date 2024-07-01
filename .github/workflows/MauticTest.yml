@@ -44,12 +44,6 @@ jobs:
         repository: mautic/mautic
         ref: ${{ matrix.mautic-versions }}
 
-    - name: Install composer 2.0
-      uses: php-actions/composer@v6
-      with:
-        php_version: "8.0"
-        version: 2
-
     - name: Setup PHP, with composer and extensions
       uses: shivammathur/setup-php@v2
       with:
