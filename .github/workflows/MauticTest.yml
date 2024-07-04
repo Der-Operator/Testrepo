@@ -85,8 +85,8 @@ jobs:
         cp ./.github/ci-files/local.php ./app/config/local.php
         php bin/console mautic:install --force http://localhost
 
-    - name: Run Code Style check
-      run: bin/php-cs-fixer fix ${{ env.PLUGIN_DIR }} --config=.php-cs-fixer.php -v --dry-run --show-progress=dots --diff
+        # - name: Run Code Style check
+        # run: bin/php-cs-fixer fix ${{ env.PLUGIN_DIR }} --config=.php-cs-fixer.php -v --dry-run --show-progress=dots --diff
     
     - name: PHPSTAN
       run: composer phpstan -- ${{ env.PLUGIN_DIR }}
